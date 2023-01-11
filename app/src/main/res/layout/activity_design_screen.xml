@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/foreBackground"
+    tools:context=".DesignScreen">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goBackButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        android:backgroundTint="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/changeTextButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@+id/changeAlignButton"
+        android:background="@drawable/ic_baseline_text_fields_24"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/app_name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/changeAlignButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@id/colorCard"
+        android:background="@drawable/ic_baseline_format_align_center_24"
+        android:backgroundTint="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/colorCard"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="103dp"
+        android:layout_toStartOf="@+id/shareButton"
+        android:background="@drawable/ic_baseline_color_lens_24"
+        android:backgroundTint="@color/white" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/shareButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/viewContainer"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ic_baseline_share_24"
+        android:backgroundTint="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewContainer">
+
+        <ImageView
+            android:id="@+id/imageViewBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/test_background" />
+
+
+        <RelativeLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/quoteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/fredokaone"
+                android:padding="10dp"
+                android:text="Quote Daily"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/shareBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/imageViewBg"
+            android:layout_alignBottom="@+id/imageViewBg"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="1dp"
+            android:fontFamily="@font/fredokaone"
+            android:padding="10dp"
+            android:text="Share from Quote Daily"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/textBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rvImage"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/fredokaone"
+        android:text="Background"
+        android:textColor="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvImage"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignStart="@id/viewContainer"
+        android:layout_alignEnd="@id/viewContainer"
+        android:layout_alignBottom="@id/viewContainer"
+        android:contentDescription="@string/app_name"
+        tools:listitem="@layout/list_fragment" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textFont"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@+id/rvImage"-->
+<!--        android:layout_alignStart="@+id/textBackground"-->
+<!--        android:layout_marginStart="100dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:fontFamily="@font/fredokaone"-->
+<!--        android:text="Fonts"-->
+<!--        android:textColor="@color/white" />-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rvFont"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_alignStart="@id/imageViewBg"-->
+<!--        android:layout_alignEnd="@id/imageViewBg"-->
+<!--        android:layout_alignBottom="@id/imageViewBg"-->
+<!--        android:contentDescription="@string/app_name"-->
+<!--        android:visibility="invisible"-->
+<!--        tools:listitem="@layout/list_fragment" />-->
+
+    </RelativeLayout>
