@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    app:cardCornerRadius="30dp"
+    android:background="@color/white"
+    android:layout_margin="10dp">
+
+     <LinearLayout
+         android:background="@color/white"
+         android:layout_width="match_parent"
+         android:orientation="vertical"
+         android:layout_height="150dp">
+
+         <TextView
+             android:layout_marginTop="10dp"
+             android:layout_marginStart="10dp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Quote Auth"
+             android:id="@+id/authorText"
+             android:textSize="20sp"
+             android:fontFamily="@font/fredokaone"
+             android:textColor="@color/purple_500"/>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Quote Msg"
+             android:layout_marginTop="10dp"
+             android:layout_marginStart="20dp"
+             android:id="@+id/quoteMsg"
+             android:textSize="14sp"
+             android:lines="6"
+             android:fontFamily="@font/fredokaone"
+             android:textColor="@color/background"/>
+
+
+     </LinearLayout>
+
+</androidx.cardview.widget.CardView>

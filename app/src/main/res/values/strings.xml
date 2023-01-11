@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">QuoteDaily</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="design_quote"><![CDATA[This is an <u>underline</u>.]]></string>
+    <string name="facebook_app_id">980314275756534</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">b49a095161ca1a87bb59cb5db111a45e</string>
+
+</resources>
